@@ -1,5 +1,6 @@
-# Multi-Layered architecture application
-This is a multi-layered architecture application sample in .net core web api.
+# Multi-Layered architecture application in .net core web api
+This is a multi-layered architecture application sample in .net core web api. Here I have added four projects, three are class library and one is web api.
+In domain project I have put all models and interfaces those are implemented in DAL project and Service project.
 
 ## Tools and Technology 
 + Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64) Developer Edition (64-bit)
