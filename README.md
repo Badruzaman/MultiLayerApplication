@@ -12,7 +12,7 @@ This is a multi-layered architecture application sample in .net core web api.
 ![Architecture](/MultiLayerApplication.Api/images/Structure.PNG)
 
 ## Project Run Issue
-If the application shows this error while running the application, please visit the URL and follow the instructions. 
+If the application shows this error while running, please visit the URL and follow the instructions. 
 
 ![Issue](/MultiLayerApplication.Api/images/RunningIssue.png)
 
