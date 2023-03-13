@@ -17,46 +17,44 @@ namespace MultiLayerApplication.Api.Controllers
             _categoryService = categoryService;
         }
 
-        // GET: api/<CategoryController>
-        [HttpGet]
+
+        [HttpGet("GetAll")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
-       
-        [HttpPost("Create")]
 
-        public async Task<ActionResult<bool>> Create(DTOCategory model)
-        {
-            await _categoryService.Create(model);
-            return true;
-        }
-
-        // GET api/<CategoryController>/5
-        [HttpGet("{id}")]
+        [HttpGet("GetById")]
         public async Task<DTOCategory> Get(int id)
         {
-           var result = await _categoryService.Get(id);
+            var result = await _categoryService.Get(id);
             return result;
         }
 
-        // POST api/<CategoryController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("Create")]
+        public async Task<ActionResult<bool>> Create(DTOCategory model)
         {
-            //_categoryService.Create(category);
+            try
+            {
+                await _categoryService.Create(model);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        // PUT api/<CategoryController>/5
-        [HttpPut("{id}")]
+        [HttpPut("Update")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
-        // DELETE api/<CategoryController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete")]
         public void Delete(int id)
         {
+
         }
     }
 }
