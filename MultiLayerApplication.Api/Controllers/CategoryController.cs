@@ -46,13 +46,13 @@ namespace MultiLayerApplication.Api.Controllers
         }
 
         [HttpPut("Update")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(DTOCategory model)
         {
 
         }
 
         [HttpDelete("Delete")]
-        public void Delete(int id)
+        public void Delete(DTOCategory model)
         {
 
         }

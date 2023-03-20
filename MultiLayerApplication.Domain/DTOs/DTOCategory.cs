@@ -8,6 +8,7 @@ namespace MultiLayerApplication.Domain.DTOs
 {
     public class DTOCategory
     {
+        public int CategoryID { get; set; }
         public string CategoryName { get; set; }
         public string Description { get; set; }
     }

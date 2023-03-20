@@ -21,12 +21,12 @@ namespace MultiLayerApplication.DAL.Repository
         {
             try
             {
-                var category = new Category() { CategoryName = model.CategoryName, Description = model.Description };
+                var category = new Category { CategoryName = model.CategoryName, Description = model.Description };
                 await this._storeContext.Categories.AddAsync(category);
                 await this._storeContext.SaveChangesAsync();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -52,7 +52,6 @@ namespace MultiLayerApplication.DAL.Repository
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }
