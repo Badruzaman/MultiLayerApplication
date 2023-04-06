@@ -32,7 +32,7 @@ namespace MultiLayerApplication.Api.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<ActionResult<bool>> Create(DTOCategory model)
+        public async Task<ActionResult<bool>> Post(DTOCategory model)
         {
             try
             {
@@ -44,13 +44,16 @@ namespace MultiLayerApplication.Api.Controllers
                 return false;
             }
         }
-
         [HttpPut("Update")]
-        public void Put(DTOCategory model)
+        public ActionResult Put(DTOCategory model)
         {
+            string str = null;
+            if(str == null)
+            {
 
+            }
+            return Ok();
         }
-
         [HttpDelete("Delete")]
         public void Delete(DTOCategory model)
         {

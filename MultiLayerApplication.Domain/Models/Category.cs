@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace MultiLayerApplication.Domain.Models
 {
@@ -12,9 +9,9 @@ namespace MultiLayerApplication.Domain.Models
         {
 
         }
-
         public int CategoryID { get; set; }
-
+        [Required]
+        [MaxLength(10)]
         public string CategoryName { get; set; }
         public string Description { get; set; }
 
